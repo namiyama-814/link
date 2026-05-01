@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>namiyama - LinkList</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* ガラス感のあるカード */
+        .card-base {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ホバー：浮かずに、境界線が光り背景がわずかに変化 */
+        .card-base:hover {
+            border-color: #3b82f6;
+            /* Blue-500 */
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+
+<body class="bg-[#f1f5f9] text-[#1e293b] antialiased">
+
+    <div class="max-w-[420px] mx-auto min-h-screen flex flex-col items-center px-8 py-20">
+
+        <header class="flex flex-col items-center mb-14 text-center">
+
+            <div class="w-20 h-20 mb-6 relative group">
+                <a href="https://github.com/namiyama-814"><img
+                        class="w-full h-full rounded-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500"
+                        src="https://avatars.githubusercontent.com/u/253646578?s=400&u=a3b1f67770bfa4a6e78b737a8f34ae56b0e6a618&v=4"
+                        alt="Avatar"></a>
+
+                <div
+                    class="absolute -bottom-1 -right-1 w-5 h-5 bg-white rounded-full flex items-center justify-center shadow-sm">
+                    <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                </div>
+            </div>
+            <h1 class="text-xl font-semibold tracking-tight text-slate-900">namiyama</h1>
+            <p class="mono text-[10px] text-slate-400 mt-2 uppercase tracking-[0.2em]">namiyamaと申します</p>
+        </header>
+
+        <nav class="w-full space-y-3">
+
+            <a href="https://twitter.com/namiyama_814"
+                class="card-base group block w-full p-4 rounded-xl active:scale-[0.98]">
+                <div class="flex items-center justify-between">
+                    <div class="flex flex-col">
+                        <span class="text-[14px] font-medium text-slate-800">Twitter(旧X)</span>
+                        <span class="mono text-[10px] text-slate-400 mt-0.5">twitter.com/namiyama_814</span>
+                    </div>
+                    <svg class="w-4 h-4 text-slate-300 group-hover:text-blue-500 transition-colors" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+            </a>
+
+            <a href="https://github.com/namiyama-814"
+                class="card-base group block w-full p-4 rounded-xl active:scale-[0.98]">
+                <div class="flex items-center justify-between">
+                    <div class="flex flex-col">
+                        <span class="text-[14px] font-medium text-slate-800">GitHub</span>
+                        <span class="mono text-[10px] text-slate-400 mt-0.5">github.com/namiyama-814</span>
+                    </div>
+                    <svg class="w-4 h-4 text-slate-300 group-hover:text-blue-500 transition-colors" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+            </a>
+
+            <a href="https://note.com/namiyama" class="card-base group block w-full p-4 rounded-xl active:scale-[0.98]">
+                <div class="flex items-center justify-between">
+                    <div class="flex flex-col">
+                        <span class="text-[14px] font-medium text-slate-800">note</span>
+                        <span class="mono text-[10px] text-slate-400 mt-0.5">note.com/namiyama</span>
+                    </div>
+                    <svg class="w-4 h-4 text-slate-300 group-hover:text-blue-500 transition-colors" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+            </a>
+
+            <a href="https://qiita.com/namiyama"
+                class="card-base group block w-full p-4 rounded-xl active:scale-[0.98]">
+                <div class="flex items-center justify-between">
+                    <div class="flex flex-col">
+                        <span class="text-[14px] font-medium text-slate-800">Qiita</span>
+                        <span class="mono text-[10px] text-slate-400 mt-0.5">qiita.com/namiyama</span>
+                    </div>
+                    <svg class="w-4 h-4 text-slate-300 group-hover:text-blue-500 transition-colors" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+            </a>
+
+        </nav>
+
+        <footer class="mt-auto pt-24 text-center">
+            <div class="flex items-center justify-center space-x-4 mb-4">
+                <div class="h-[1px] w-8 bg-slate-200"></div>
+                <span class="mono text-[9px] text-slate-300 uppercase tracking-widest">End of File</span>
+                <div class="h-[1px] w-8 bg-slate-200"></div>
+            </div>
+            <p class="text-[10px] text-slate-400">© 2026 Licensed under MIT</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
